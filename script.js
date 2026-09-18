@@ -1,3 +1,29 @@
+// LANGUAGE SWITCH
+
+function setLanguage(language) {
+
+    const elements = document.querySelectorAll("[data-en]");
+
+    elements.forEach(function(element) {
+
+        if (language === "ta") {
+            element.textContent = element.getAttribute("data-ta");
+        } else {
+            element.textContent = element.getAttribute("data-en");
+        }
+
+    });
+
+    document.documentElement.lang = language;
+}
+
+
+// DEFAULT LANGUAGE
+setLanguage("en");
+
+
+// WHATSAPP ENQUIRY FORM
+
 document.getElementById("enquiryForm").addEventListener("submit", function(event) {
 
     event.preventDefault();
