@@ -11,8 +11,7 @@ body {
     color: white;
 }
 
-/* ================= NAVBAR ================= */
-
+/* HEADER */
 header {
     width: 100%;
     min-height: 75px;
@@ -24,7 +23,13 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #333;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
@@ -34,9 +39,10 @@ header {
 }
 
 .logo:first-letter {
-    color: #ff1010;
+    color: red;
 }
 
+/* NAVIGATION */
 .nav-links {
     display: flex;
     list-style: none;
@@ -51,21 +57,20 @@ header {
 }
 
 .nav-links a:hover {
-    color: #ff1010;
+    color: red;
 }
 
 /* LANGUAGE BUTTONS */
-
 .language {
     display: flex;
     gap: 6px;
     margin-left: auto;
-    margin-right: 25px;
+    margin-right: 20px;
 }
 
 .language button {
     padding: 8px 12px;
-    border: 1px solid #ff3333;
+    border: 1px solid red;
     background: transparent;
     color: white;
     border-radius: 5px;
@@ -74,13 +79,10 @@ header {
 }
 
 .language button:hover {
-    background: #ff1010;
-    color: white;
+    background: red;
 }
 
-
-/* ================= HERO ================= */
-
+/* HERO */
 .hero {
     min-height: 100vh;
 
@@ -88,7 +90,7 @@ header {
         linear-gradient(
             to right,
             rgba(0,0,0,0.88),
-            rgba(0,0,0,0.25)
+            rgba(0,0,0,0.3)
         ),
         url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80");
 
@@ -106,38 +108,33 @@ header {
 }
 
 .hero h1 {
-    font-size: 65px;
-    line-height: 1.05;
+    font-size: 60px;
+    line-height: 1.1;
     margin-bottom: 25px;
-    color: white;
 }
 
 .hero p {
-    font-size: 21px;
-    margin-bottom: 15px;
+    font-size: 20px;
     color: #ddd;
+    margin-bottom: 15px;
 }
 
 .hero-btn {
     display: inline-block;
     margin-top: 20px;
     padding: 15px 30px;
-    background: #ed1111;
+    background: #e50914;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 .hero-btn:hover {
-    background: #b90000;
-    transform: translateY(-3px);
+    background: #b00000;
 }
 
-
-/* ================= SERVICES ================= */
-
+/* SERVICES */
 .services {
     padding: 100px 8%;
     background: #0d0d0d;
@@ -162,14 +159,14 @@ header {
     background: #171717;
     padding: 45px 30px;
     text-align: center;
-    border: 1px solid #292929;
+    border: 1px solid #333;
     border-radius: 10px;
     transition: 0.3s;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    border-color: #ff1010;
+    transform: translateY(-8px);
+    border-color: red;
     box-shadow: 0 10px 30px rgba(255,0,0,0.2);
 }
 
@@ -197,19 +194,13 @@ header {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.service-card a:hover {
-    background: #b90000;
-}
-
-
-/* ================= ABOUT ================= */
-
+/* ABOUT */
 .about {
     min-height: 450px;
     padding: 100px 8%;
+
     display: flex;
     align-items: center;
 
@@ -240,9 +231,7 @@ header {
     margin-bottom: 15px;
 }
 
-
-/* ================= GALLERY ================= */
-
+/* GALLERY */
 .gallery {
     padding: 100px 8%;
     background: #080808;
@@ -258,14 +247,13 @@ header {
     background: #171717;
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid #292929;
+    border: 1px solid #333;
     transition: 0.3s;
 }
 
 .bike-card:hover {
     transform: translateY(-8px);
-    border-color: #ff1010;
-    box-shadow: 0 10px 30px rgba(255,0,0,0.2);
+    border-color: red;
 }
 
 .bike-card img {
@@ -292,9 +280,7 @@ header {
     margin: 0 25px 25px;
 }
 
-
-/* ================= ENQUIRY ================= */
-
+/* ENQUIRY */
 .enquiry {
     padding: 100px 8%;
     background: #101010;
@@ -318,7 +304,7 @@ header {
     background: #171717;
     padding: 40px;
     border-radius: 12px;
-    border: 1px solid #292929;
+    border: 1px solid #333;
 }
 
 #enquiryForm input,
@@ -334,7 +320,6 @@ header {
     border-radius: 5px;
 
     font-size: 16px;
-    outline: none;
 }
 
 #enquiryForm textarea {
@@ -342,20 +327,11 @@ header {
     resize: vertical;
 }
 
-#enquiryForm input:focus,
-#enquiryForm select:focus,
-#enquiryForm textarea:focus {
-    border-color: #ff1010;
-}
-
-#enquiryForm select {
-    cursor: pointer;
-}
-
 #enquiryForm button {
     grid-column: 1 / -1;
 
     padding: 15px;
+
     background: #e50914;
     color: white;
 
@@ -364,19 +340,15 @@ header {
 
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
 
-    transition: 0.3s;
+    cursor: pointer;
 }
 
 #enquiryForm button:hover {
-    background: #b90000;
-    transform: translateY(-2px);
+    background: #b00000;
 }
 
-
-/* ================= CONTACT ================= */
-
+/* CONTACT */
 .contact {
     padding: 80px 8%;
     text-align: center;
@@ -402,21 +374,11 @@ header {
     font-weight: bold;
 }
 
-.contact-btn:hover {
-    background: #b90000;
-}
-
 .contact-btn.whatsapp {
     background: #25d366;
 }
 
-.contact-btn.whatsapp:hover {
-    background: #1da851;
-}
-
-
-/* ================= FLOATING WHATSAPP ================= */
-
+/* FLOATING WHATSAPP */
 .floating-whatsapp {
     position: fixed;
     right: 25px;
@@ -433,24 +395,20 @@ header {
     justify-content: center;
 
     border-radius: 50%;
-
     font-size: 30px;
+
     text-decoration: none;
 
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 
     z-index: 999;
-
-    transition: 0.3s;
 }
 
 .floating-whatsapp:hover {
     transform: scale(1.1);
 }
 
-
-/* ================= MOBILE ================= */
-
+/* MOBILE */
 @media (max-width: 900px) {
 
     header {
@@ -462,12 +420,8 @@ header {
         gap: 12px;
     }
 
-    .nav-links a {
-        font-size: 14px;
-    }
-
     .hero h1 {
-        font-size: 48px;
+        font-size: 45px;
     }
 
     .service-container,
@@ -476,7 +430,6 @@ header {
     }
 }
 
-
 @media (max-width: 600px) {
 
     header {
@@ -484,10 +437,6 @@ header {
         padding: 15px;
         flex-direction: column;
         gap: 12px;
-    }
-
-    .logo {
-        font-size: 19px;
     }
 
     .language {
@@ -507,21 +456,10 @@ header {
         font-size: 38px;
     }
 
-    .hero p {
-        font-size: 17px;
-    }
-
     .services,
     .gallery,
     .enquiry {
         padding: 70px 6%;
-    }
-
-    .services > h2,
-    .gallery > h2,
-    .enquiry > h2,
-    .contact > h2 {
-        font-size: 32px;
     }
 
     #enquiryForm {
