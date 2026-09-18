@@ -7,27 +7,32 @@
     <title>New City Auto Consulting</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <header>
-    <div class="logo">
-        <i class="fa-solid fa-motorcycle"></i>
-        New City Auto Consulting
-    </div>
+    <nav class="navbar">
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#buy">Buy</a>
-        <a href="#sell">Sell</a>
-        <a href="#exchange">Exchange</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <div class="logo">
+            🏍️ New City Auto Consulting
+        </div>
+
+        <div class="language">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('ta')">தமிழ்</button>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home" data-en="Home" data-ta="முகப்பு">Home</a></li>
+            <li><a href="#buy" data-en="Buy" data-ta="வாங்க">Buy</a></li>
+            <li><a href="#sell" data-en="Sell" data-ta="விற்க">Sell</a></li>
+            <li><a href="#exchange" data-en="Exchange" data-ta="மாற்றம்">Exchange</a></li>
+            <li><a href="#gallery" data-en="Gallery" data-ta="பைக்குகள்">Gallery</a></li>
+            <li><a href="#contact" data-en="Contact" data-ta="தொடர்பு">Contact</a></li>
+        </ul>
+
     </nav>
 </header>
 
@@ -37,28 +42,29 @@
 
     <div class="hero-content">
 
-        <p class="welcome">WELCOME TO</p>
-
-        <h1>
-            NEW CITY<br>
-            <span>AUTO CONSULTING</span>
+        <h1
+            data-en="New City Auto Consulting"
+            data-ta="நியூ சிட்டி ஆட்டோ கன்சல்டிங்">
+            New City Auto Consulting
         </h1>
 
-        <p class="tagline">
-            Buy • Sell • Exchange Your Bike With Confidence
+        <p
+            data-en="Buy • Sell • Exchange Bikes"
+            data-ta="பைக் வாங்க • விற்க • மாற்றிக்கொள்ள">
+            Buy • Sell • Exchange Bikes
         </p>
 
-        <div class="hero-buttons">
+        <p
+            data-en="Your trusted place for quality bikes"
+            data-ta="தரமான பைக்குகளுக்கான உங்கள் நம்பகமான இடம்">
+            Your trusted place for quality bikes
+        </p>
 
-            <a href="#gallery" class="btn">
-                VIEW BIKES
-            </a>
-
-            <a href="#contact" class="btn outline">
-                CONTACT US
-            </a>
-
-        </div>
+        <a href="#gallery" class="hero-btn"
+           data-en="VIEW BIKES"
+           data-ta="பைக்குகளை பார்க்க">
+            VIEW BIKES
+        </a>
 
     </div>
 
@@ -68,26 +74,32 @@
 <!-- SERVICES -->
 <section class="services">
 
-    <div class="section-title">
-        <p>WHAT WE DO</p>
-        <h2>Our <span>Services</span></h2>
-    </div>
+    <h2 data-en="Our Services" data-ta="எங்கள் சேவைகள்">
+        Our Services
+    </h2>
 
     <div class="service-container">
 
         <!-- BUY -->
         <div class="service-card" id="buy">
 
-            <i class="fa-solid fa-motorcycle"></i>
+            <div class="icon">🏍️</div>
 
-            <h3>BUY A BIKE</h3>
+            <h3 data-en="BUY A BIKE" data-ta="பைக் வாங்க">
+                BUY A BIKE
+            </h3>
 
-            <p>
-                Explore bikes available through New City Auto Consulting.
-                Contact us for price, model and availability details.
+            <p
+                data-en="Find a bike that suits your needs and budget."
+                data-ta="உங்கள் தேவைக்கும் பட்ஜெட்டுக்கும் ஏற்ற பைக்கை தேர்வு செய்யுங்கள்.">
+                Find a bike that suits your needs and budget.
             </p>
 
-            <a href="#gallery">VIEW BIKES</a>
+            <a href="#gallery"
+               data-en="VIEW BIKES"
+               data-ta="பைக்குகளை பார்க்க">
+                VIEW BIKES
+            </a>
 
         </div>
 
@@ -95,16 +107,23 @@
         <!-- SELL -->
         <div class="service-card" id="sell">
 
-            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <div class="icon">💰</div>
 
-            <h3>SELL</h3>
+            <h3 data-en="SELL YOUR BIKE" data-ta="உங்கள் பைக்கை விற்க">
+                SELL YOUR BIKE
+            </h3>
 
-            <p>
-                Want to sell your bike?
-                Contact us and share your bike details with our team.
+            <p
+                data-en="Contact us if you want to sell your bike."
+                data-ta="உங்கள் பைக்கை விற்க விரும்பினால் எங்களை தொடர்பு கொள்ளுங்கள்.">
+                Contact us if you want to sell your bike.
             </p>
 
-            <a href="#contact">SELL YOUR BIKE</a>
+            <a href="#contact"
+               data-en="CONTACT US"
+               data-ta="தொடர்பு கொள்ள">
+                CONTACT US
+            </a>
 
         </div>
 
@@ -112,15 +131,23 @@
         <!-- EXCHANGE -->
         <div class="service-card" id="exchange">
 
-            <i class="fa-solid fa-right-left"></i>
+            <div class="icon">🔄</div>
 
-            <h3>EXCHANGE</h3>
+            <h3 data-en="EXCHANGE" data-ta="பைக் மாற்றம்">
+                EXCHANGE
+            </h3>
 
-            <p>
-                Exchange your existing bike and choose your next ride.
+            <p
+                data-en="Exchange your existing bike for another bike."
+                data-ta="உங்களிடம் உள்ள பைக்கை மற்றொரு பைக்குடன் மாற்றிக்கொள்ளுங்கள்.">
+                Exchange your existing bike for another bike.
             </p>
 
-            <a href="#contact">EXCHANGE NOW</a>
+            <a href="#contact"
+               data-en="ENQUIRE NOW"
+               data-ta="இப்போது விசாரிக்க">
+                ENQUIRE NOW
+            </a>
 
         </div>
 
@@ -134,16 +161,20 @@
 
     <div class="about-content">
 
-        <p>ABOUT US</p>
-
-        <h2>
-            Your Trusted <span>Auto Consulting</span> Partner
+        <h2 data-en="About Us" data-ta="எங்களை பற்றி">
+            About Us
         </h2>
 
-        <p>
-            New City Auto Consulting helps customers buy, sell and
-            exchange bikes easily. We focus on providing a simple,
-            convenient and trustworthy experience for every customer.
+        <p
+            data-en="New City Auto Consulting helps customers buy, sell and exchange bikes with a simple and convenient process."
+            data-ta="நியூ சிட்டி ஆட்டோ கன்சல்டிங் மூலம் பைக்குகளை எளிதாக வாங்கவும், விற்கவும், மாற்றிக்கொள்ளவும் முடியும்.">
+            New City Auto Consulting helps customers buy, sell and exchange bikes with a simple and convenient process.
+        </p>
+
+        <p
+            data-en="We are located at Monday Market Road, Paraseri."
+            data-ta="எங்கள் நிறுவனம் மண்டே மார்க்கெட் ரோடு, பரசேரியில் அமைந்துள்ளது.">
+            We are located at Monday Market Road, Paraseri.
         </p>
 
     </div>
@@ -151,85 +182,74 @@
 </section>
 
 
-<!-- BIKE GALLERY -->
+<!-- GALLERY -->
 <section class="gallery" id="gallery">
 
-    <div class="section-title">
+    <h2 data-en="Available Bikes" data-ta="கிடைக்கும் பைக்குகள்">
+        Available Bikes
+    </h2>
 
-        <p>OUR BIKES</p>
+    <div class="gallery-container">
 
-        <h2>Available <span>Bikes</span></h2>
-
-    </div>
-
-
-    <div class="bike-container">
-
-        <!-- BIKE 1 -->
         <div class="bike-card">
 
-            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80"
-                 alt="Royal Enfield Bike">
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80">
 
-            <div class="bike-info">
+            <h3
+                data-en="Royal Enfield"
+                data-ta="ராயல் என்ஃபீல்டு">
+                Royal Enfield
+            </h3>
 
-                <h3>Royal Enfield</h3>
+            <p
+                data-en="2022 • Petrol • Excellent Condition"
+                data-ta="2022 • பெட்ரோல் • சிறந்த நிலை">
+                2022 • Petrol • Excellent Condition
+            </p>
 
-                <p>2022 • Petrol • Excellent Condition</p>
-
-                <h3>₹1,45,000</h3>
-
-                <a href="#contact" class="small-btn">
-                    ENQUIRE NOW
-                </a>
-
-            </div>
+            <strong>₹1,45,000</strong>
 
         </div>
 
 
-        <!-- BIKE 2 -->
         <div class="bike-card">
 
-            <img src="https://images.unsplash.com/photo-1558980394-0c7c9f9b8c8a?auto=format&fit=crop&w=800&q=80"
-                 alt="Sports Bike">
+            <img src="https://images.unsplash.com/photo-1558980394-0c7c9f9b8c8a?auto=format&fit=crop&w=800&q=80">
 
-            <div class="bike-info">
+            <h3
+                data-en="Sports Bike"
+                data-ta="ஸ்போர்ட்ஸ் பைக்">
+                Sports Bike
+            </h3>
 
-                <h3>Sports Bike</h3>
+            <p
+                data-en="2023 • Petrol • Good Condition"
+                data-ta="2023 • பெட்ரோல் • நல்ல நிலை">
+                2023 • Petrol • Good Condition
+            </p>
 
-                <p>2023 • Petrol • Good Condition</p>
-
-                <h3>₹1,20,000</h3>
-
-                <a href="#contact" class="small-btn">
-                    ENQUIRE NOW
-                </a>
-
-            </div>
+            <strong>₹1,20,000</strong>
 
         </div>
 
 
-        <!-- BIKE 3 -->
         <div class="bike-card">
 
-            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80"
-                 alt="Classic Bike">
+            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80">
 
-            <div class="bike-info">
+            <h3
+                data-en="Classic Bike"
+                data-ta="கிளாசிக் பைக்">
+                Classic Bike
+            </h3>
 
-                <h3>Classic Bike</h3>
+            <p
+                data-en="2021 • Petrol • Well Maintained"
+                data-ta="2021 • பெட்ரோல் • நன்றாக பராமரிக்கப்பட்டது">
+                2021 • Petrol • Well Maintained
+            </p>
 
-                <p>2021 • Petrol • Well Maintained</p>
-
-                <h3>₹95,000</h3>
-
-                <a href="#contact" class="small-btn">
-                    ENQUIRE NOW
-                </a>
-
-            </div>
+            <strong>₹95,000</strong>
 
         </div>
 
@@ -241,138 +261,118 @@
 <!-- ENQUIRY -->
 <section class="enquiry" id="contact">
 
-    <div class="section-title">
+    <h2
+        data-en="Send an Enquiry"
+        data-ta="விசாரணை அனுப்பவும்">
+        Send an Enquiry
+    </h2>
 
-        <p>GET IN TOUCH</p>
-
-        <h2>Bike <span>Enquiry</span></h2>
-
-    </div>
-
-
-    <div class="form-container">
-
-        <!-- FORM -->
-        <form id="enquiryForm">
-
-            <input type="text"
-                   id="name"
-                   placeholder="Your Name"
-                   required>
-
-            <input type="tel"
-                   id="phone"
-                   placeholder="Your Phone Number"
-                   required>
-
-            <select id="type" required>
-
-                <option value="">Select Enquiry Type</option>
-
-                <option value="Buy">BUY</option>
-
-                <option value="Sell">SELL</option>
-
-                <option value="Exchange">EXCHANGE</option>
-
-            </select>
+    <p
+        data-en="Fill the form and send your enquiry directly through WhatsApp."
+        data-ta="படிவத்தை நிரப்பி உங்கள் விசாரணையை WhatsApp மூலம் நேரடியாக அனுப்புங்கள்.">
+        Fill the form and send your enquiry directly through WhatsApp.
+    </p>
 
 
-            <input type="text"
-                   id="bike"
-                   placeholder="Bike Model">
+    <form id="enquiryForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name / உங்கள் பெயர்"
+            required>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Phone Number / தொலைபேசி எண்"
+            required>
 
 
-            <textarea id="message"
-                      rows="5"
-                      placeholder="Enter your enquiry"></textarea>
+        <select id="type" required>
+
+            <option value=""
+                data-en="Select Enquiry Type"
+                data-ta="விசாரணை வகையை தேர்வு செய்யவும்">
+                Select Enquiry Type
+            </option>
+
+            <option value="Buy">Buy / வாங்க</option>
+            <option value="Sell">Sell / விற்க</option>
+            <option value="Exchange">Exchange / மாற்றம்</option>
+
+        </select>
 
 
-            <button type="submit" class="btn whatsapp-btn">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
-                SEND ENQUIRY
-
-            </button>
-
-        </form>
+        <input
+            type="text"
+            id="bike"
+            placeholder="Bike Model / பைக் மாடல்"
+            required>
 
 
-        <!-- CONTACT DETAILS -->
-        <div class="contact-details">
-
-            <h3>Contact Us</h3>
-
-            <p>
-                <i class="fa-solid fa-phone"></i>
-                +91 9786937644
-            </p>
-
-            <p>
-                <i class="fa-brands fa-whatsapp"></i>
-                WhatsApp Available
-            </p>
-
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Monday Market Road, Paraseri
-            </p>
+        <textarea
+            id="message"
+            placeholder="Your Message / உங்கள் செய்தி"
+            rows="5">
+        </textarea>
 
 
-            <a href="tel:+919786937644" class="btn">
+        <button type="submit"
+                data-en="SEND ENQUIRY"
+                data-ta="விசாரணையை அனுப்பவும்">
+            SEND ENQUIRY
+        </button>
 
-                <i class="fa-solid fa-phone"></i>
-
-                CALL NOW
-
-            </a>
-
-
-            <a href="https://wa.me/919786937644"
-               target="_blank"
-               class="btn whatsapp">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
-                WHATSAPP
-
-            </a>
-
-        </div>
-
-    </div>
+    </form>
 
 </section>
 
 
-<!-- FOOTER -->
-<footer>
+<!-- CONTACT -->
+<section class="contact">
 
-    <h3>NEW CITY AUTO CONSULTING</h3>
+    <h2
+        data-en="Contact Us"
+        data-ta="எங்களை தொடர்பு கொள்ள">
+        Contact Us
+    </h2>
 
-    <p>
-        Buy • Sell • Exchange
+    <p>📞 +91 9786937644</p>
+
+    <p
+        data-en="📍 Monday Market Road, Paraseri"
+        data-ta="📍 மண்டே மார்க்கெட் ரோடு, பரசேரி">
+        📍 Monday Market Road, Paraseri
     </p>
 
-    <p>
-        © 2026 New City Auto Consulting. All Rights Reserved.
-    </p>
 
-</footer>
+    <a
+        href="tel:+919786937644"
+        class="contact-btn">
+        📞 CALL NOW
+    </a>
+
+
+    <a
+        href="https://wa.me/919786937644"
+        target="_blank"
+        class="contact-btn whatsapp">
+        💬 WHATSAPP
+    </a>
+
+</section>
 
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/919786937644?text=Hello%20New%20City%20Auto%20Consulting,%20I%20am%20interested%20in%20a%20bike."
-   class="floating-whatsapp"
-   target="_blank">
-
-    <i class="fa-brands fa-whatsapp"></i>
-
+<a
+    href="https://wa.me/919786937644"
+    target="_blank"
+    class="floating-whatsapp">
+    💬
 </a>
 
 
-<!-- JAVASCRIPT -->
 <script src="script.js"></script>
 
 </body>
